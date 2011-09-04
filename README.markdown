@@ -13,7 +13,7 @@ What will it do?
 
 How to run it?
 ==============
-    convert infile [outfile]
+    smbc-convert infile [outfile]
 
 + *infile* is your CSV file from the SMBC site
 + *outfile* is the cleaned up file, if omitted the output got to stdout
