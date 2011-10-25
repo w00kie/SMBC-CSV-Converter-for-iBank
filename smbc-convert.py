@@ -33,7 +33,10 @@ def main(argv):
 	try:
 		for line in fin.readlines():
 			line = line.split(",")
-			line[0] = line[0].replace("/","-")
+			date = line[0].split("/")
+			# Swap the year to change from %Y/%m/%d to %m/%d/%Y
+			date.append(date.pop(0))
+			line[0] = "/".join(date)
 			fout.write(",".join(line))
 	except UnicodeDecodeError:
 		sys.stderr.write("ERROR: infile is not encoded with shift-jis")
